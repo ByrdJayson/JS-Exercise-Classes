@@ -195,7 +195,15 @@ class Student extends Lambdasian {
 */
 class ProjectManager extends Instructor {
   constructor(object){
-  super();
+  super(object);
+  this.gradClassName = object.gradClassName;
+  this.favInstructor = object.favInstructor;
+   }
+   standUp(slackChannel){
+     return `${this.name} announces to ${slackChannel}, @channel standy times!`
+   }
+   debugsCode(object, subject){
+    return `${this.name} debugs ${object.name}'s code on ${subject}`
    }
 }
 /*
