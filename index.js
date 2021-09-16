@@ -133,11 +133,16 @@ class Lambdasian {
 */
 class Instructor extends Lambdasian {
   constructor(object){
-  super(object.name, object.age, object.location);
+  super(object);
+  this.specialty = object.specialty;
+  this.favLanguage = object.favLanguage;
+  this.catchPhrase = object.catchPhrase;
   }
+  
   demo(subject){
     return `Today we are learning about ${subject}`
   }
+
   grade(studentObj, subject){
     return `${studentObj.name} receives a perfect score on ${subject}`
   }
@@ -174,8 +179,10 @@ class Student {
         + `standUp` a method that takes in a slack channel and returns `{name} announces to {channel}, @channel standy times!`
         + `debugsCode` a method that takes in a student object and a subject and returns `{name} debugs {student.name}'s code on {subject}`
 */
-class ProjectManager {
-   
+class ProjectManager extends Instructor {
+  constructor(object){
+  super();
+   }
 }
 /*
   STRETCH PROBLEM (no tests!)
