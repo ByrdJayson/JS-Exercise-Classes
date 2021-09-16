@@ -133,7 +133,13 @@ class Lambdasian {
 */
 class Instructor extends Lambdasian {
   constructor(object){
-
+  super(object.name, object.age, object.location);
+  }
+  demo(subject){
+    return `Today we are learning about ${subject}`
+  }
+  grade(studentObj, subject){
+    return `${studentObj.name} receives a perfect score on ${subject}`
   }
 }
 /*
